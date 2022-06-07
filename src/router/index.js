@@ -49,8 +49,8 @@ const routes = [
     ]
   },
   {
-    // path: 'namedView',
-    // component: () => import('../views/NamedView.vue')
+    path: 'namedView',
+    component: () => import('../views/NamedView.vue')
     // children: [
     //   {
     //     path: 'c2a',
