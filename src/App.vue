@@ -16,7 +16,7 @@
             <!-- <a class="nav-link" href="#">Features</a> -->
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :to="{name:'新增頁面'}">新增頁面</router-link>
+            <router-link class="nav-link" :to="{name:'newpage'}">新增頁面</router-link>
             <!-- <a class="nav-link" href="#">Pricing</a> -->
           </li>
           <li class="nav-item">

@@ -17,7 +17,7 @@ const routes = [
   },
   {
     path: '/newpage',
-    name: '新增頁面',
+    name: 'newpage',
     component: () => import('../views/NewPage.vue'),
     // 加入子項目頁面
     children: [
@@ -49,24 +49,24 @@ const routes = [
     ]
   },
   {
-    path: 'namedView',
-    component: () => import('../views/NamedView.vue')
-    // children: [
-    //   {
-    //     path: 'c2a',
-    //     components: {
-    //       left: () => import('../views/ComponentC.vue'),
-    //       right: () => import('../views/ComponentA.vue')
-    //     }
-    //   },
-    //   {
-    //     path: 'a2b',
-    //     components: {
-    //       left: () => import('../views/ComponentA.vue'),
-    //       right: () => import('../views/ComponentB.vue')
-    //     }
-    //   }
-    // ]
+    path: '/namedView',
+    component: () => import('../views/NamedView.vue'),
+    children: [
+      {
+        path: 'c2a',
+        components: {
+          left: () => import('../views/ComponentC.vue'),
+          right: () => import('../views/ComponentA.vue')
+        }
+      },
+      {
+        path: 'a2b',
+        components: {
+          left: () => import('../views/ComponentA.vue'),
+          right: () => import('../views/ComponentB.vue')
+        }
+      }
+    ]
   }
 ]
 
