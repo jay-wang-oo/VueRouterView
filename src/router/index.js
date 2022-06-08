@@ -28,6 +28,26 @@ const routes = [
       {
         path: 'b',
         component: () => import('../views/ComponentB.vue')
+      },
+      {
+        path: 'namedView',
+        component: () => import('../views/NamedView.vue'),
+        children: [
+          {
+            path: 'c2a',
+            components: {
+              left: () => import('../views/ComponentC.vue'),
+              right: () => import('../views/ComponentA.vue')
+            }
+          },
+          {
+            path: 'a2b',
+            components: {
+              left: () => import('../views/ComponentA.vue'),
+              right: () => import('../views/ComponentB.vue')
+            }
+          }
+        ]
       }
     ]
   },
@@ -45,26 +65,26 @@ const routes = [
         path: 'd',
         name: 'd',
         component: () => import('../views/ComponentD.vue')
-      }
-    ]
-  },
-  {
-    path: '/namedView',
-    component: () => import('../views/NamedView.vue'),
-    children: [
-      {
-        path: 'c2a',
-        components: {
-          left: () => import('../views/ComponentC.vue'),
-          right: () => import('../views/ComponentA.vue')
-        }
       },
       {
-        path: 'a2b',
-        components: {
-          left: () => import('../views/ComponentA.vue'),
-          right: () => import('../views/ComponentB.vue')
-        }
+        path: 'namedView2',
+        component: () => import('../views/NamedView2.vue'),
+        children: [
+          {
+            path: 'c2d',
+            components: {
+              left2: () => import('../views/ComponentC.vue'),
+              right2: () => import('../views/ComponentA.vue')
+            }
+          },
+          {
+            path: 'b2c',
+            components: {
+              left2: () => import('../views/ComponentB.vue'),
+              right2: () => import('../views/ComponentC.vue')
+            }
+          }
+        ]
       }
     ]
   }

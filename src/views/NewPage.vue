@@ -8,6 +8,12 @@
           <router-link to="/newpage/b" class="list-group-item list-group-item-action" aria-current="true">
           ComponentB
           </router-link>
+          <router-link to="/newpage/namedView/c2a" class="list-group-item list-group-item-action" aria-current="true">
+          c2a
+          </router-link>
+          <router-link to="/newpage/namedView/a2b" class="list-group-item list-group-item-action" aria-current="true">
+          a2b
+          </router-link>
         </div>
     </div>
     <div class="col-8">
