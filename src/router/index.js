@@ -71,7 +71,7 @@ const routes = [
         component: () => import('../views/NamedView2.vue'),
         children: [
           {
-            path: 'c2d',
+            path: 'c2a',
             components: {
               left2: () => import('../views/ComponentC.vue'),
               right2: () => import('../views/ComponentA.vue')
